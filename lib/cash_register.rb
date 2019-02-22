@@ -1,14 +1,14 @@
 require 'pry'
 
 class CashRegister
-  attr_accessor :total, :items, :discount, :price, :quantity
+  attr_accessor :total, :items, :discount, :price
 
 
   def initialize(discount=nil)
     @discount = discount
     @total = 0
     @quantity = 0
-    @items = []
+    @cart = []
   end
 
   def add_item(item, price, quantity=1)
@@ -29,7 +29,7 @@ class CashRegister
   end
 
   def items
-    @items
+    @cart
     binding.pry
   end
 
