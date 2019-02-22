@@ -33,9 +33,7 @@ class CashRegister
     #binding.pry
   end
 
-  def void_last_transaction
-    @cart
-    binding.pry
+  def void_last_transaction # refactored to also remove correct amount of last item from cart
     @total =  @total - @last_trans
     @cart.pop(@quantity)
     @total
